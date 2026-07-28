@@ -1,9 +1,11 @@
 <p align="center">
   <img src="images/banner_main.png" alt="HBAAE Banner">
 </p>
- Hide Assistant Arrow (HBAAE)
+ # Hide Assistant Arrow (HBAAE)
 
-Hide Assistant Arrow (HBAAE) hides or fades the Single-Button Assistant Arrow for both Blizzard UI and EllesmereUI.
+Hide Assistant Arrow (HBAAE) was created to solve a compatibility issue where Blizzard's Single-Button Assistant Arrow does not hide correctly when using EllesmereUI.
+
+In addition to fixing this issue, the addon allows you to completely hide or adjust the opacity of the Assistant Arrow for both Blizzard Action Bars and EllesmereUI.
 
 ## Features
 
