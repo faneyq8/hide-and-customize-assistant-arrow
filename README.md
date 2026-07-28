@@ -4,7 +4,7 @@
 
 # Hide Assistant Arrow (HBAAE)
 
-![WoW Retail](https://img.shields.io/badge/WoW-Retail_12.1.0-0E7AFF?style=for-the-badge&logo=blizzard)
+![WoW Retail 12.1.0](https://img.shields.io/badge/WoW-Retail_12.1.0-0E7AFF?style=for-the-badge&logo=blizzard)
 ![Lua](https://img.shields.io/badge/Lua-5.1-2C2D72?style=for-the-badge&logo=lua)
 ![License](https://img.shields.io/badge/License-MIT-2EA043?style=for-the-badge)
 
