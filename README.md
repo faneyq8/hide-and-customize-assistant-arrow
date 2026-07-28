@@ -20,3 +20,17 @@ World of Warcraft/_retail_/Interface/AddOns/
 Then run:
 
 /reload
+
+## Support
+
+Found a bug or have a feature request? Please open an issue on GitHub:
+
+https://github.com/faneyq8/hide-assistant-arrow/issues
+
+When reporting a bug, please include:
+
+- World of Warcraft version
+- HBAAE version
+- Whether you are using Blizzard UI or EllesmereUI
+- Steps to reproduce the problem
+- Any Lua error messages, if available
