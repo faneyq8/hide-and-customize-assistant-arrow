@@ -1,4 +1,6 @@
-![HBAAE Banner](images/banner_main.png)
+<p align="center">
+  <img src="images/banner_main.png" alt="HBAAE Banner">
+</p>
 # Hide Assistant Arrow (HBAAE)
 
 Hide Assistant Arrow (HBAAE) hides or fades the Single-Button Assistant Arrow for both Blizzard UI and EllesmereUI.
