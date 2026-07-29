@@ -1,46 +1,39 @@
-<p align="center">
-  <img src="images/banner_main.png" alt="HBAAE Banner">
-</p>
-
 # Hide Assistant Arrow (HBAAE)
 
-![WoW Retail 12.1.0](https://img.shields.io/badge/WoW-Retail_12.1.0-0E7AFF?style=for-the-badge&logo=blizzard)
-![Lua](https://img.shields.io/badge/Lua-5.1-2C2D72?style=for-the-badge&logo=lua)
-![License](https://img.shields.io/badge/License-MIT-2EA043?style=for-the-badge)
-
-Hide Assistant Arrow (HBAAE) was created to solve a compatibility issue where Blizzard's Single-Button Assistant Arrow does not hide correctly when using EllesmereUI.
-
-In addition to fixing this issue, the addon allows you to completely hide or adjust the opacity of the Assistant Arrow for both Blizzard Action Bars and EllesmereUI.
+Hide or fade the Single-Button Assistant Arrow on Blizzard action bars and EllesmereUI.
 
 ## Features
 
-- Blizzard UI support
-- EllesmereUI support
-- Automatic detection
-- Opacity control
-- Enable / Disable toggle
-- PayPal donation support
+- Fixes the Assistant Arrow remaining visible with EllesmereUI.
+- Supports Blizzard action bars and EllesmereUI.
+- Enable or disable the addon.
+- Opacity control from 0% to 100%.
+- Custom addon icon.
+- Draggable minimap button.
+- Mouse-wheel opacity control in 5% steps.
+- Automatic UI detection shown in the minimap tooltip.
+- Account-wide saved settings.
 
-## Installation
+## Minimap Button
 
-Download the latest release and extract the **HBAAE** folder into:
+- **Left-click:** Open HBAAE settings.
+- **Right-click:** Enable or disable HBAAE.
+- **Mouse wheel:** Increase or decrease opacity by 5%.
+- **Drag:** Move the button around the minimap.
 
-World of Warcraft/_retail_/Interface/AddOns/
+## Commands
 
-Then run:
+- `/hbaae`
+- `/hbaae on`
+- `/hbaae off`
+- `/hbaae opacity 0-100`
+- `/hbaae minimap`
+- `/hbaae minimap hide`
 
-/reload
+## Donation
 
-## Support
+A PayPal support button is available in the addon settings.
 
-Found a bug or have a feature request? Please open an issue on GitHub:
+## Version
 
-https://github.com/faneyq8/hide-assistant-arrow/issues
-
-When reporting a bug, please include:
-
-- World of Warcraft version
-- HBAAE version
-- Whether you are using Blizzard UI or EllesmereUI
-- Steps to reproduce the problem
-- Any Lua error messages, if available
+1.2.0

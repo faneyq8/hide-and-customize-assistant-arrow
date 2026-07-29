@@ -1,0 +1,10 @@
+## Interface: 120000, 120001, 120005, 120007, 120100
+## Title: Hide Assistant Arrow (HBAAE)
+## Notes: Hide or fade the Single-Button Assistant arrow for Blizzard action bars and EllesmereUI.
+## Author: Abdullah
+## Version: 1.2.0
+## SavedVariables: HBAAE_DB
+## OptionalDeps: EllesmereUI
+## IconTexture: Interface\AddOns\HBAAE\icon
+
+HBAAE.lua
