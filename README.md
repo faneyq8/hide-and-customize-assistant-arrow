@@ -52,3 +52,26 @@ Skull Ring, Circle, Star, Shield, Diamond, Rune, Wings, Flame, Lightning, Moon, 
 ## Author
 
 FaneyQ8
+## Compatibility
+
+- ✅ World of Warcraft: The War Within
+- ✅ Blizzard Default UI
+- ✅ ElvUI
+- ✅ EllesmereUI
+
+## License
+
+MIT License
+
+## Author
+
+FaneyQ8
+
+GitHub:
+https://github.com/faneyq8
+
+Twitch:
+https://www.twitch.tv/gamerzoneq8
+
+TikTok:
+https://www.tiktok.com/@gamerzoneq8
