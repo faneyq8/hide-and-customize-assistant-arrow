@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/banner_main.png" alt="HCAA Banner">
+</p>
+
 # HCAA v1.4.1 Official
 
 **Hide & Customize Assistant Arrow**
