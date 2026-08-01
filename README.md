@@ -1,14 +1,16 @@
 <p align="center">
-  <img src="images/banner_main.png" alt="HCAA Banner">
+  <img src="./images/banner_main.png" alt="HCAA Banner" width="100%">
 </p>
 
 # HCAA v1.4.1 Official
 
-**Hide & Customize Assistant Arrow**
+## Hide & Customize Assistant Arrow
 
-HCAA is a lightweight World of Warcraft addon that lets you hide or fully customize Blizzard's Single-Button Assistant Arrow.
+HCAA is a lightweight World of Warcraft addon that lets you completely hide or fully customize Blizzard's Single-Button Assistant Arrow while remaining fast, lightweight, and fully compatible with modern UI replacements.
 
-## Features
+---
+
+## ✨ Features
 
 - Hide the Assistant Arrow completely
 - 20 built-in custom frame styles
@@ -19,30 +21,59 @@ HCAA is a lightweight World of Warcraft addon that lets you hide or fully custom
 - Draggable minimap button
 - Account, character, and specialization profiles
 - Combat and zone visibility rules
-- Import and export settings
+- Import & Export settings
 - Lightweight, event-driven detection
 
-## Supported Interfaces
+---
 
-- Blizzard Default UI
-- ElvUI
-- EllesmereUI
+## 🖥️ Supported Interfaces
 
-HCAA automatically detects the active interface and applies the appropriate behavior.
+- ✅ Blizzard Default UI
+- ✅ ElvUI
+- ✅ EllesmereUI
 
-## Custom Frames
+HCAA automatically detects the active interface and applies the correct behavior.
 
-Skull Ring, Circle, Star, Shield, Diamond, Rune, Wings, Flame, Lightning, Moon, Compass, Sword, Crown, Crystal, Sun, Void, Hexagon, Triangle, Cross, and Minimal Ring.
+---
 
-## Minimap Controls
+## 🎨 Included Frame Styles
 
-- Left-click: Open settings
-- Right-click: Enable or disable HCAA
-- Middle-click: Hide or show the arrow
-- Mouse wheel: Change opacity
-- Drag: Move the minimap button
+- Skull Ring
+- Circle
+- Star
+- Shield
+- Diamond
+- Rune
+- Wings
+- Flame
+- Lightning
+- Moon
+- Compass
+- Sword
+- Crown
+- Crystal
+- Sun
+- Void
+- Hexagon
+- Triangle
+- Cross
+- Minimal Ring
 
-## Slash Commands
+---
+
+## 🖱️ Minimap Controls
+
+| Action | Function |
+|--------|----------|
+| Left Click | Open Options |
+| Right Click | Enable / Disable HCAA |
+| Middle Click | Hide / Show Arrow |
+| Mouse Wheel | Change Opacity |
+| Drag | Move Button |
+
+---
+
+## 💬 Slash Commands
 
 ```text
 /hcaa
@@ -53,29 +84,32 @@ Skull Ring, Circle, Star, Shield, Diamond, Rune, Wings, Flame, Lightning, Moon, 
 /hcaa reset
 ```
 
-## Author
+---
 
-FaneyQ8
-## Compatibility
+## ✅ Compatibility
 
-- ✅ World of Warcraft: The War Within
-- ✅ Blizzard Default UI
-- ✅ ElvUI
-- ✅ EllesmereUI
+- World of Warcraft: The War Within
+- Blizzard Default UI
+- ElvUI
+- EllesmereUI
 
-## License
+---
+
+## 📜 License
 
 MIT License
 
-## Author
+---
 
-FaneyQ8
+## 👤 Author
 
-GitHub:
+**FaneyQ8**
+
+**GitHub**  
 https://github.com/faneyq8
 
-Twitch:
+**Twitch**  
 https://www.twitch.tv/gamerzoneq8
 
-TikTok:
+**TikTok**  
 https://www.tiktok.com/@gamerzoneq8
