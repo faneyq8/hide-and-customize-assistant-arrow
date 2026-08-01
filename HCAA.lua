@@ -1,13 +1,11 @@
 local ADDON_NAME = ...
-local VERSION = "1.4.1"
-local DONATION_URL = "https://www.paypal.com/donate/?business=faney%40live.com&no_recurring=0&currency_code=USD"
+local VERSION = "1.4.2"
 local SOCIAL = {
     twitch={label="Twitch", value="https://www.twitch.tv/gamerzoneq8", icon="Interface\\AddOns\\HCAA\\Social\\twitch"},
     tiktok={label="TikTok", value="https://www.tiktok.com/@gamerzoneq8", icon="Interface\\AddOns\\HCAA\\Social\\tiktok"},
     discord={label="Discord", value=".faney", icon="Interface\\AddOns\\HCAA\\Social\\discord"},
     battlenet={label="Battle.net", value="Faney#2957", icon="Interface\\AddOns\\HCAA\\Social\\battlenet"},
     github={label="GitHub", value="https://github.com/faneyq8", icon="Interface\\AddOns\\HCAA\\Social\\github"},
-    donate={label="Donate", value=DONATION_URL, icon="Interface\\AddOns\\HCAA\\Social\\donate"},
 }
 BINDING_HEADER_HCAA = "HCAA"
 BINDING_NAME_HCAA_TOGGLE = "Toggle HCAA"
@@ -857,7 +855,7 @@ local function CreateConfig()
 end
 local function OpenConfig() if not configFrame then CreateConfig() end if configFrame:IsShown() then configFrame:Hide() else configFrame:Show() end end
 
--- Screenshot-inspired v1.4.1 official interface. The legacy builder above remains
+-- Screenshot-inspired v1.4.2 official interface. The legacy builder above remains
 -- as a lightweight fallback reference; OpenConfig is reassigned below.
 local GOLD_R,GOLD_G,GOLD_B=1,.78,.08
 local hSliderSerial=0
@@ -1188,7 +1186,7 @@ local function HBuildAbout(owner,page)
         b:SetScript("OnLeave",function() GameTooltip:Hide() end)
         b:SetScript("OnClick",function() PopupEdit(data.label..":",data.value) end)
     end
-    local order={"twitch","tiktok","discord","battlenet","github","donate"}
+    local order={"twitch","tiktok","discord","battlenet","github"}
     for i,key in ipairs(order) do SocialIcon(key,22+(i-1)*94) end
     HLabel(box,"Click an icon to copy its link or account name.",22,-292,"GameFontHighlightSmall",.75,.75,.75)
 
