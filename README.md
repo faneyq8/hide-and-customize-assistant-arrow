@@ -1,39 +1,59 @@
-# Hide Assistant Arrow (HBAAE)
+# HCAA
 
-Hide or fade the Single-Button Assistant Arrow on Blizzard action bars and EllesmereUI.
+## Hide & Customize Assistant Arrow
+
+HCAA is a lightweight World of Warcraft addon that lets you hide or fully customize Blizzard's Single-Button Assistant Arrow while remaining fast and compatible with modern UI replacements.
+
+---
 
 ## Features
 
-- Fixes the Assistant Arrow remaining visible with EllesmereUI.
-- Supports Blizzard action bars and EllesmereUI.
-- Enable or disable the addon.
-- Opacity control from 0% to 100%.
-- Custom addon icon.
+- Hide the Assistant Arrow completely.
+- 20 built-in custom frame styles.
+- Custom frame colors.
+- Optional glow effects.
+- Opacity control.
+- Scale control.
+- Rotation control.
+- X/Y position adjustment.
+- Live preview.
 - Draggable minimap button.
-- Mouse-wheel opacity control in 5% steps.
-- Automatic UI detection shown in the minimap tooltip.
-- Account-wide saved settings.
+- Profile support.
+- Import / Export.
+- Lightweight and optimized.
 
-## Minimap Button
+---
 
-- **Left-click:** Open HBAAE settings.
-- **Right-click:** Enable or disable HBAAE.
-- **Mouse wheel:** Increase or decrease opacity by 5%.
-- **Drag:** Move the button around the minimap.
+## Supported UI
 
-## Commands
+- Blizzard Default UI
+- ElvUI
+- EllesmereUI
 
-- `/hbaae`
-- `/hbaae on`
-- `/hbaae off`
-- `/hbaae opacity 0-100`
-- `/hbaae minimap`
-- `/hbaae minimap hide`
+HCAA automatically detects the active interface and applies the correct behavior.
 
-## Donation
+---
 
-A PayPal support button is available in the addon settings.
+## Slash Commands
 
-## Version
+```text
+/hcaa
+/hcaa on
+/hcaa off
+/hcaa toggle
+```
 
-1.2.0
+---
+
+## Author
+
+**FaneyQ8**
+
+GitHub:
+https://github.com/faneyq8
+
+Twitch:
+https://www.twitch.tv/gamerzoneq8
+
+TikTok:
+https://www.tiktok.com/@gamerzoneq8
