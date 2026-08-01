@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./images/banner_main.png" alt="HCAA Banner" width="100%">
+  <img src="./images/banner_main.png" alt="HCAA Banner" width="900">
 </p>
 
 # HCAA v1.4.1 Official
