@@ -1,24 +1,12 @@
-# Changelog
+# HCAA v1.4.1 Official
 
-## v1.2.0
-
-- Added a custom HBAAE addon icon.
-- Added a draggable minimap button.
-- Left-click opens settings.
-- Right-click enables or disables HBAAE.
-- Mouse wheel adjusts Assistant Arrow opacity in 5% steps.
-- Added status messages for enable, disable, and opacity changes.
-- Added addon version, detected UI, current status, and opacity to the minimap tooltip.
-- Added a minimap visibility option and slash commands.
-
-## v1.1.0
-
-- Added a Donate via PayPal button to the HBAAE settings page.
-- Added external-link support when available.
-- Added a copyable PayPal donation link fallback.
-
-## v1.0.2
-
-- Added confirmed Blizzard action button support.
-- Preserved EllesmereUI support.
-- Added enable/disable and opacity controls.
+- Renamed the addon and all internal identifiers to HCAA.
+- Added native support for Blizzard Default UI, ElvUI, and EllesmereUI.
+- Added 20 custom frame styles.
+- Added custom colors, optional glow, opacity, scale, rotation, and position controls.
+- Added live previews, profiles, import/export, and minimap controls.
+- Improved action-button detection and relocation handling.
+- Improved behavior after `/reload`.
+- Fixed disappearing custom frames.
+- Fixed duplicate overlays and severe FPS drops.
+- Standardized all addon names, commands, SavedVariables, and profile formats under HCAA.

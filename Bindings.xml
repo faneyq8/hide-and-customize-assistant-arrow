@@ -1,0 +1,5 @@
+<Bindings>
+  <Binding name="HCAA_TOGGLE" header="HCAA" category="ADDONS">
+    HCAA_ToggleBinding();
+  </Binding>
+</Bindings>
