@@ -2,28 +2,25 @@
 
 ## Hide & Customize Assistant Arrow
 
-HCAA is a lightweight World of Warcraft addon that lets you hide or customize Blizzard's Single-Button Assistant Arrow.
+HCAA is a lightweight World of Warcraft addon that gives you full control over Blizzard's Single-Button Assistant Arrow.
 
 ## Features
 
-- Hide the Assistant Arrow completely.
-- Keep Blizzard's original arrow on the default Blizzard UI.
-- Choose from 20 built-in custom frame styles.
-- Custom arrow and glow colors.
-- Opacity, scale, rotation, and X/Y position controls.
-- Live in-game preview.
-- Combat and zone visibility rules.
-- Account-wide, character, or specialization setting scope.
-- Draggable minimap button.
-- Lightweight, event-driven detection.
-
-## Supported Interfaces
-
-- Blizzard Default UI
-- ElvUI
-- EllesmereUI
-
-HCAA automatically detects the active interface and applies the appropriate behavior.
+- Hide the Assistant Arrow or keep Blizzard's original arrow.
+- Choose from 40 built-in custom shapes:
+  - 20 Classic Shapes
+  - 20 Midnight Shapes
+- Modern Obsidian Ember settings interface.
+- Custom arrow color and optional glow effect.
+- Adjust opacity, scale, rotation, and X/Y position.
+- Live in-game preview while changing settings.
+- Combat visibility rules and allowed-zone controls.
+- Account-wide, per-character, or per-specialization profiles.
+- Compact 820×760 settings layout.
+- Minimap button positioned cleanly on the minimap ring.
+- Optional toggle keybind.
+- Hidden-arrow statistics.
+- Lightweight, event-driven design.
 
 ## Minimap Controls
 
@@ -49,6 +46,3 @@ HCAA automatically detects the active interface and applies the appropriate beha
 ## Author
 
 **FaneyQ8**
-
-## Custom frame image
-Open **General > Shapes > Custom**. Put a square `.tga`, `.blp`, or `.dds` image in `HCAA/Custom`, then enter its filename without the extension. A 256x256 transparent image is recommended. Use `/reload` after adding or replacing the file while World of Warcraft is running.
