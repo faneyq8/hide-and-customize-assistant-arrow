@@ -1,3 +1,11 @@
+## v1.5.1 - EllesmereUI Flicker Fixes
+
+- Prevented the custom Assistant Arrow frame from being reset while entering combat.
+- Stopped normal combat clicks from being mistaken for action-bar drag operations.
+- Reattach EllesmereUI action-button visuals safely after combat ends.
+- Kept the custom Assistant Arrow frame stable while hovering units and other interactive targets.
+- Changed automatic action-bar refreshes to preserve the active frame instead of rebuilding it.
+
 ## v1.5.0 UI Compact Layout
 
 - Reduced the options window height to remove unused bottom space.

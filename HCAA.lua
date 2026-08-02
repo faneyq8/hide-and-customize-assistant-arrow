@@ -1,5 +1,5 @@
 local ADDON_NAME = ...
-local VERSION = "1.5.0"
+local VERSION = "1.5.1"
 local SOCIAL = {
     twitch={label="Twitch", value="https://www.twitch.tv/gamerzoneq8", icon="Interface\\AddOns\\HCAA\\Social\\twitch"},
     tiktok={label="TikTok", value="https://www.tiktok.com/@gamerzoneq8", icon="Interface\\AddOns\\HCAA\\Social\\tiktok"},
@@ -1251,6 +1251,10 @@ local function CancelAssistantMoveTimeout()
 end
 
 local function BeginAssistantMove(button)
+    -- A regular combat click still fires OnMouseDown on EllesmereUI buttons.
+    -- Treating it as a drag hid the custom overlay until the next rescan, which
+    -- made the Assistant Arrow blink whenever combat started or an ability was used.
+    if InCombatLockdown() then return end
     if not button then return end
     local overlay=customOverlays[button]
     local isManaged=activeEllesmereOwners[button] or ellesmereOwners[button] or (overlay and overlay:IsShown())
@@ -1274,6 +1278,7 @@ local function BeginAssistantMove(button)
 end
 
 local function CompleteAssistantMove(button)
+    if InCombatLockdown() then return false end
     if not assistantMovePending or not button then return false end
     assistantMovePending=false
     assistantMoveDestination=button
@@ -1361,22 +1366,23 @@ local function HookEllesmereButtons()
             button:HookScript("OnDragStart",function(self)
                 BeginAssistantMove(self)
             end)
-            button:HookScript("OnMouseDown",function(self)
-                -- Some click-to-pickup configurations do not fire OnDragStart.
-                -- Mark the move only when this is an already managed Assistant slot.
-                if activeEllesmereOwners[self] or ellesmereOwners[self] then
-                    BeginAssistantMove(self)
-                end
-            end)
             button:HookScript("OnReceiveDrag",function(self)
                 if assistantMovePending and self~=assistantMoveSource and CompleteAssistantMove(self) then return end
                 ScheduleActionBarRescanBurst()
             end)
             button:HookScript("OnMouseUp",function(self)
-                if assistantMovePending and self~=assistantMoveSource and CompleteAssistantMove(self) then return end
-                ScheduleActionBarRescanBurst()
+                -- Normal ability clicks also fire MouseUp. Only rescan if a
+                -- real drag operation is in progress, otherwise the custom
+                -- frame is briefly hidden after every cast.
+                if assistantMovePending then
+                    if self~=assistantMoveSource and CompleteAssistantMove(self) then return end
+                    ScheduleActionBarRescanBurst()
+                end
             end)
-            button:HookScript("OnShow",function() ScheduleActionBarRescanBurst() end)
+            -- Mouseover and target changes can make EllesmereUI show a child of
+            -- the action button. A quiet scan is enough here; rebuilding every
+            -- owner makes the custom frame visibly blink while hovering units.
+            button:HookScript("OnShow",function() ScheduleScan(0.05) end)
             button:HookScript("OnAttributeChanged",function(self,name)
                 if name=="action" or name=="type" then
                     if assistantMoveDestination==self then
@@ -1385,7 +1391,7 @@ local function HookEllesmereButtons()
                             if HCAA_DB then pcall(ProcessEllesmereOwner,self) end
                         end)
                     else
-                        ScheduleActionBarRescanBurst()
+                        ScheduleScan(0.05)
                     end
                 end
             end)
@@ -1394,14 +1400,21 @@ local function HookEllesmereButtons()
 end
 
 function ScheduleActionBarRescanBurst()
+    -- EllesmereUI changes secure action-button state as combat begins. Do not
+    -- clear the owner table in combat: ResetEllesmereTracking hides the overlay
+    -- briefly and is the source of the visible blink. A normal deferred scan
+    -- refreshes alpha safely without tearing down the current visual.
+    if InCombatLockdown() then
+        HookEllesmereButtons()
+        ScheduleScan(0.10)
+        return
+    end
     actionBarRescanGeneration=actionBarRescanGeneration+1
     local generation=actionBarRescanGeneration
-    local preservedDestination=assistantMoveDestination
-    ResetEllesmereTracking()
-    if preservedDestination then
-        activeEllesmereOwners[preservedDestination]=true
-        ellesmereOwners[preservedDestination]=true
-    end
+    -- An automatic action-bar refresh must not tear down existing owners. UI
+    -- mouseover state can emit the same events as a moved action and clearing
+    -- this table caused the custom frame to disappear for a frame. Real moves
+    -- are handled explicitly by BeginAssistantMove/CompleteAssistantMove.
     HookEllesmereButtons()
     if moveWatchTicker then moveWatchTicker:Cancel(); moveWatchTicker=nil end
     local elapsed=0
@@ -1460,7 +1473,13 @@ events:SetScript("OnEvent",function(_,event,arg)
     end
     if event=="PLAYER_LOGIN" then CreateMinimap(); FirstRun(); InstallElvUIHooks(); SchedulePostReloadReattach(); C_Timer.After(0.75,function() if HCAA_DB then InstallElvUIHooks(); ScanAll() end end) end
     if event=="PLAYER_ENTERING_WORLD" then SchedulePostReloadReattach() end
-    if event=="ACTIONBAR_SLOT_CHANGED" or event=="ACTIONBAR_PAGE_CHANGED" or event=="ACTIONBAR_SHOWGRID" or event=="ACTIONBAR_HIDEGRID" or event=="CURSOR_CHANGED" then
+    if event=="PLAYER_REGEN_DISABLED" then
+        -- Keep the current EllesmereUI owner intact while entering combat.
+        ScheduleScan(0.10)
+    elseif event=="PLAYER_REGEN_ENABLED" then
+        -- Once combat ends, action buttons are safe to settle and reattach.
+        C_Timer.After(0.12,function() if HCAA_DB then ScheduleActionBarRescanBurst() end end)
+    elseif event=="ACTIONBAR_SLOT_CHANGED" or event=="ACTIONBAR_PAGE_CHANGED" or event=="ACTIONBAR_SHOWGRID" or event=="ACTIONBAR_HIDEGRID" or event=="CURSOR_CHANGED" then
         ScheduleActionBarRescanBurst()
     else
         ScheduleScan(event=="PLAYER_LOGIN" and .20 or .05)
