@@ -1,5 +1,7 @@
 # HCAA v1.5.0
 
+![HCAA Features](images/banner_main.png)
+
 ## Hide & Customize Assistant Arrow
 
 HCAA is a lightweight World of Warcraft addon that gives you full control over Blizzard's Single-Button Assistant Arrow.
