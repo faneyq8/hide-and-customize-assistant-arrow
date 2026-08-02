@@ -1,22 +1,21 @@
-# HCAA v1.4.1 Official
+# HCAA v1.5.0
 
-**Hide & Customize Assistant Arrow**
+## Hide & Customize Assistant Arrow
 
-HCAA is a lightweight World of Warcraft addon that lets you hide or fully customize Blizzard's Single-Button Assistant Arrow.
+HCAA is a lightweight World of Warcraft addon that lets you hide or customize Blizzard's Single-Button Assistant Arrow.
 
 ## Features
 
-- Hide the Assistant Arrow completely
-- 20 built-in custom frame styles
-- Custom frame colors
-- Optional glow effects
-- Opacity, scale, rotation, and X/Y position controls
-- Live preview
-- Draggable minimap button
-- Account, character, and specialization profiles
-- Combat and zone visibility rules
-- Import and export settings
-- Lightweight, event-driven detection
+- Hide the Assistant Arrow completely.
+- Keep Blizzard's original arrow on the default Blizzard UI.
+- Choose from 20 built-in custom frame styles.
+- Custom arrow and glow colors.
+- Opacity, scale, rotation, and X/Y position controls.
+- Live in-game preview.
+- Combat and zone visibility rules.
+- Account-wide, character, or specialization setting scope.
+- Draggable minimap button.
+- Lightweight, event-driven detection.
 
 ## Supported Interfaces
 
@@ -26,17 +25,13 @@ HCAA is a lightweight World of Warcraft addon that lets you hide or fully custom
 
 HCAA automatically detects the active interface and applies the appropriate behavior.
 
-## Custom Frames
-
-Skull Ring, Circle, Star, Shield, Diamond, Rune, Wings, Flame, Lightning, Moon, Compass, Sword, Crown, Crystal, Sun, Void, Hexagon, Triangle, Cross, and Minimal Ring.
-
 ## Minimap Controls
 
-- Left-click: Open settings
-- Right-click: Enable or disable HCAA
-- Middle-click: Hide or show the arrow
-- Mouse wheel: Change opacity
-- Drag: Move the minimap button
+- **Left-click:** Open settings.
+- **Right-click:** Enable or disable HCAA.
+- **Middle-click:** Hide the arrow.
+- **Mouse wheel:** Adjust opacity.
+- **Drag:** Move the minimap button.
 
 ## Slash Commands
 
@@ -46,9 +41,14 @@ Skull Ring, Circle, Star, Shield, Diamond, Rune, Wings, Flame, Lightning, Moon, 
 /hcaa off
 /hcaa toggle
 /hcaa opacity 0-100
+/hcaa mode hidden|original|custom
+/hcaa shape NAME
 /hcaa reset
 ```
 
 ## Author
 
-FaneyQ8
+**FaneyQ8**
+
+## Custom frame image
+Open **General > Shapes > Custom**. Put a square `.tga`, `.blp`, or `.dds` image in `HCAA/Custom`, then enter its filename without the extension. A 256x256 transparent image is recommended. Use `/reload` after adding or replacing the file while World of Warcraft is running.

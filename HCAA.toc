@@ -2,7 +2,7 @@
 ## Title: Hide And Customize Assistant Arrow (HCAA)
 ## Notes: Hide and customize Blizzard's Single-Button Assistant Arrow.
 ## Author: FaneyQ8
-## Version: 1.4.2
+## Version: 1.5.0
 ## SavedVariables: HCAA_DB
 ## OptionalDeps: EllesmereUI, EllesmereUIActionBars, ElvUI, Bartender4, Dominos
 ## IconTexture: Interface\AddOns\HCAA\icon
