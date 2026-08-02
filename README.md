@@ -1,12 +1,17 @@
-# HCAA v1.5.0
+# HCAA v1.5.1
+
 
 ![HCAA Features](images/banner_main.png)
 
+
 ## Hide & Customize Assistant Arrow
+
 
 HCAA is a lightweight World of Warcraft addon that gives you full control over Blizzard's Single-Button Assistant Arrow.
 
+
 ## Features
+
 
 - Hide the Assistant Arrow or keep Blizzard's original arrow.
 - Choose from 40 built-in custom shapes:
@@ -24,7 +29,9 @@ HCAA is a lightweight World of Warcraft addon that gives you full control over B
 - Hidden-arrow statistics.
 - Lightweight, event-driven design.
 
+
 ## Minimap Controls
+
 
 - **Left-click:** Open settings.
 - **Right-click:** Enable or disable HCAA.
@@ -32,7 +39,9 @@ HCAA is a lightweight World of Warcraft addon that gives you full control over B
 - **Mouse wheel:** Adjust opacity.
 - **Drag:** Move the minimap button.
 
+
 ## Slash Commands
+
 
 ```text
 /hcaa
@@ -45,6 +54,5 @@ HCAA is a lightweight World of Warcraft addon that gives you full control over B
 /hcaa reset
 ```
 
-## Author
 
-**FaneyQ8**
+## Author
